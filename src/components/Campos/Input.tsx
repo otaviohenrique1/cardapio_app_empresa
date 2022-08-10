@@ -1,6 +1,5 @@
-import { ErrorMessage, Field/* , FieldArray */ } from 'formik'
-import React, { HTMLAttributes, InputHTMLAttributes, ReactNode } from 'react'
-import { /* Col, */ Label, LabelProps/* , Row */ } from 'reactstrap';
+import { ErrorMessage, Field } from 'formik'
+import React, { HTMLAttributes, InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement>;
@@ -62,64 +61,6 @@ const FormInputContainerStyled = styled.div<FormInputContainerProps>`
   margin-left: ${(props) => props.margin_left || "0"};
   margin-right: ${(props) => props.margin_right || "0"};
 `;
-
-export type CheckboxProps = PaddingMarginStyleProps & {
-  label_texto: ReactNode;
-  label_props: LabelProps;
-  input_props: InputProps;
-};
-
-export function Checkbox(props: CheckboxProps) {
-  return (
-    <FormInputContainer
-      className="d-flex flex-column"
-      {...props.containerPaddingMarginProps}
-    >
-      <Input {...props.input_props} type="checkbox" />
-      <Label {...props.label_props}>{props.label_texto}</Label>
-    </FormInputContainer>
-  )
-}
-
-export type RadioProps = PaddingMarginStyleProps & {
-  label_texto: ReactNode;
-  label_props: LabelProps;
-  input_props: InputProps;
-};
-
-export function Radio(props: RadioProps) {
-  return (
-    <FormInputContainer
-      className="d-flex flex-column"
-      {...props.containerPaddingMarginProps}
-    >
-      <Input {...props.input_props} type="radio" />
-      <Label {...props.label_props} htmlFor={props.input_props.id}>
-        {props.label_texto}
-      </Label>
-    </FormInputContainer>
-  )
-}
-
-/*
-export function Checkbox(props: CheckboxProps) {
-  return (
-    <Label {...props.label_props}>
-      <Input {...props.input_props} type="checkbox" />
-      {props.label_texto}
-    </Label>
-  )
-}
-
-export function Radio(props: RadioProps) {
-  return (
-    <Label {...props.label_props} htmlFor={props.input_props.id}>
-      <Input {...props.input_props} type="radio" />
-      {props.label_texto}
-    </Label>
-  )
-}
-*/
 
 /* export type InputArrayProps = { 
   data: [],

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Formik, FormikProps, Form, ErrorMessage } from "formik";
 import { Button } from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
-import { FormInputProps, Input } from "../components/Input";
+import { FormInputProps, Input } from "../components/Campos/Input";
 import { MdOutlineAlternateEmail, MdLockOutline } from "react-icons/md";
 import { FaGoogle, FaApple } from "react-icons/fa";
 

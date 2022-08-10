@@ -1,7 +1,7 @@
 import { ErrorMessage, Form, Formik, FormikProps } from 'formik';
 import { ButtonGroup, Label } from 'reactstrap';
 import { Button } from '../components/Button';
-import { FormInputProps, Input } from '../components/Input';
+import { FormInputProps, Input } from '../components/Campos/Input';
 import { useNavigate } from 'react-router-dom';
 import { Flex } from '../components/Containers/Flex';
 import { initialValues, validationSchema } from '../utils/constantes';
